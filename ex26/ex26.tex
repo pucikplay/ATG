@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{polski}
+
+\title{Algorytmiczna teoria gier {-} zadanie 26}
+\author{Gabriel Budziński}
+
+\begin{document}
+\maketitle
+
+\section{Treść}
+
+Trzy małe swinki mieszkały w trzech własnoręcznie wybudowanych budynkach. Każde dwie mieszkały w odległości $\sqrt{3}$km od siebie. Chciały zamontowac alarm przeciw-wilkowy. Mają jedną czujkę, która ma zasięg wykrywania wilków do 2km. Każda świnka musi kupic kabel (niezależnie od siebie), który połączy jej domek czujką. Kilometr kabla kosztuje 1. Jesli wszystkie świnki kupią co najmniej 1km kabla, to umieszczają czujkę idealnie pośrodku trójkąta utworzonego przez domy świnek. Jeśli która świnka kupi mniejszą długo śc kabla, to czujkę stawiamy możliwie jak najbliżej centrum trójkąta. Jeśli kabli nie wystarczy, aby połączyc wszystkie 3 swinki z alarmem, to korzystają dwie świnki, które kupiły najdłuzsze kable (wszelkie remisy rozstrzygane są w kolejno ści jako ści domków, tj. wygrywa słomiany, potem drewiany i na końcu murowany). W przypadku, gdy mozna połączyc tylko dwie świnki z czujką, czujka jest stawiana możliwie najbliżej środka odcinka łączącego domy tych dwóch świnek. Jeśli dwie świnki nie mają w sumie kabli o łącznej długości 3km, to świnka, która kupiła najdłuższy kabel, stawia czujkę bezpo średnio przy swoim domu (remisy rozstrzygamy jak wcześniej). Niechroniona (niepodłączona do czujki) świnka musi zapłacić 10 za usługi firmy ochroniarskiej. Kazda podłączona do czujki świnka zyskuje trzykrotność minimalnej odległości między jej domem a brzegiem obszaru chronionego przez czujkę.
+
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+    \item Dlaczego można uznać, że gra ma ograniczone wypłaty?
+    \item Opisz jakie strategie czyste świnek są zdominowane.
+    \item Znajdź optima Pareta oraz czyste równowagi Nasha.
+    \item Czy istnieje rozwiązanie dominujące dla tej gry?
+    \item Jak należałoby zmienić warunki gry, aby móc uznać tę grę za dyskooperatywną?
+\end{enumerate}
+
+\section{Rozwiązanie}
+
+\subsection*{a)}
+
+Wypłaty są w oczywisty sposób ograniczone z góry przez 6, ponieważ maksymalna odległość od krawędzi koła o promieniu 2km znajdując się w nim to 2km.
+
+Z treści zadania wprost wynika, że zawsze conajmniej jedna ze świnek będzie miała dostęp do czujki, a zatem największa odległość każdego z domków od niej to $\sqrt{3}$km. W takim razie nie opłaca się żadnej z nich kupować kabla dłuższego niż $\sqrt{3}$km. W takim razie możemy ograniczyć wypłaty od dołu przez $-10-\sqrt{3}$ (nie jest dokłane, ale jest).
+
+\subsection*{b)}
+
+Rozpatrzmy na początek wszyskie możliwe przypadki połączeń, $a,b,c$ - długości kabli zakupione odpowiednio przez każdą ze świnek. W każdym obowiązuje $0 \leq a,b,c \leq \sqrt{3}$ oraz $a \leq b \leq c$ oraz założenie, że kable są możliwie najkrótsze.
+
+\subsubsection{3 świnki podłączone}
+
+$x$ - odległość czujki od środka trójkąta w (w kierunku świnki $A$). Aby nie utacić połączenia oraz `przyciągnąć' czujkę do siebie $a$ musi spełniać
+\[1 \geq a \geq \frac{3}{2} - \sqrt{\max\{\min\{b,c\},0\} - \frac{1}{4}}\]
+
+Z twierdzenia kosinusów obliczamy $b = c = \sqrt{1+ x + x^2}$
+
+Wypłaty: $(3 + 3x - a, 3(2 - \sqrt{1+ x + x^2}) - b, 3(2 - \sqrt{1+ x + x^2}) - c)$
+
+
+\subsubsection{2 świnki podłączone}
+
+\subsubsection{1 świnka podłączona}
+
+
+\end{document}
