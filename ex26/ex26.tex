@@ -32,25 +32,25 @@ Trzy małe swinki mieszkały w trzech własnoręcznie wybudowanych budynkach. Ka
 
 Wypłaty są w oczywisty sposób ograniczone z góry przez 6, ponieważ maksymalna odległość od krawędzi koła o promieniu 2km znajdując się w nim to 2km.
 
-Z treści zadania wprost wynika, że zawsze conajmniej jedna ze świnek będzie miała dostęp do czujki, a zatem największa odległość każdego z domków od niej to $\sqrt{3}$km. W takim razie nie opłaca się żadnej z nich kupować kabla dłuższego niż $\sqrt{3}$km. W takim razie możemy ograniczyć wypłaty od dołu przez $-10-\sqrt{3}$ (nie jest dokłane, ale jest).
+Z treści zadania wprost wynika, że nie opłaca się kupować kabla dłuższego niż 1km, ponieważ niezależnie od wyborów pozostałych świnek uzyska się dostęp do czujki, a kupując dłuższy kabel nie polepszy się swojej wypłaty (można tylko pogorszyć, bo większy koszt kabla i być może dalej od czujki). W takim razie możemy ostro ograniczyć wypłaty od dołu przez $-10-1 = -11$.
 
 \subsection*{b)}
 
-Rozpatrzmy na początek wszyskie możliwe przypadki połączeń, $a,b,c$ - długości kabli zakupione odpowiednio przez każdą ze świnek. W każdym obowiązuje $0 \leq a,b,c \leq \sqrt{3}$ oraz $a \leq b \leq c$ oraz założenie, że kable są możliwie najkrótsze.
+Jak powiedzieliśmy, wszelkie strategie o długości kabla większej niż 1 są silnie zdominowane, ponieważ strategia 1 zawsze da lepszą wypłatę, niezależnie od strategii pozostałych świnek. Pozostałe strategie są nieokreślone, ponieważ możemy dostać wyższą wypłatę niż ze strategią 1 (np. nasza to 0.5 a pozostałych 0), ale możemy też dostać niższą (np. my 0.5 a reszta 1).
 
-\subsubsection{3 świnki podłączone}
+\subsection*{c)}
 
-$x$ - odległość czujki od środka trójkąta w (w kierunku świnki $A$). Aby nie utacić połączenia oraz `przyciągnąć' czujkę do siebie $a$ musi spełniać
-\[1 \geq a \geq \frac{3}{2} - \sqrt{\max\{\min\{b,c\},0\} - \frac{1}{4}}\]
+\begin{itemize}
+    \item Równowagi Nasha: Jedyną równowagą jest profil strategii $(1,1,1)$, ponieważ nie mając dostępu do czujki mamy maksymalnie wypłatę -10, a podłączając nawet na maksymalną odległość (czujka leży na przeciwległym boku) wypłata wynosi $3 \cdot \frac{1}{2} - \frac{3}{2} = 0$ (oczywiście lepiej jest kupić krótszy kabel długości 1, bo czujka będzie bliżej nas, wtedy najlepsza wypłata zakładając, że pozostałe świnki zawsze chcą dla nas jak najgorzej). Każde inne ustawienie niż $(1,1,1)$ nie jest najlepszą odpowiedzią, bo pozwala nam poprawić którąś z wypłat zmieniając strategię, czyli nie są równowagami Nasha.
+    \item Optima Pareto: Mamy nieskończoną liczbę optimów w sensie Pareto, ponieważ każdy profil strategii, który powoduje podłączenie wszystkich świnek do czujki oraz kable są minimalnej długości. Jeśli chcielibyśmy sobie polepszyć wypłatę, to jedynie możemy to zrobić skracając kabel, co z poprzednich rozważań z pewnością odłączyłoby którąś ze świnek i zmiejszyło jej wypłatę. Podobnie w konfiguracjach, w których nie wszystkie świnki są podłączone można polepszyć wypłatę świnek bez dostępu do czujki nie zmniejszając wypłaty tych podłączonych (podobnie jak w równowagach Nasha).
+\end{itemize}
 
-Z twierdzenia kosinusów obliczamy $b = c = \sqrt{1+ x + x^2}$
+\subsection*{d)}
 
-Wypłaty: $(3 + 3x - a, 3(2 - \sqrt{1+ x + x^2}) - b, 3(2 - \sqrt{1+ x + x^2}) - c)$
+Nie, ponieważ da się uzyskać większe wypłaty niż w profilu strategii (1,1,1) (np. równe 6 lub bliskie 6, w zależności, która świnka), ale są wzajemnie wykluczające.
 
+\subsection*{e)}
 
-\subsubsection{2 świnki podłączone}
-
-\subsubsection{1 świnka podłączona}
-
+Możnaby 
 
 \end{document}
