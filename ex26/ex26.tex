@@ -42,7 +42,7 @@ Jak powiedzieliśmy, wszelkie strategie o długości kabla większej niż 1 są 
 
 \begin{itemize}
     \item Równowagi Nasha: Jedyną równowagą jest profil strategii $(1,1,1)$, ponieważ nie mając dostępu do czujki mamy maksymalnie wypłatę -10, a podłączając nawet na maksymalną odległość (czujka leży na przeciwległym boku) wypłata wynosi $3 \cdot \frac{1}{2} - \frac{3}{2} = 0$ (oczywiście lepiej jest kupić krótszy kabel długości 1, bo czujka będzie bliżej nas, wtedy najlepsza wypłata zakładając, że pozostałe świnki zawsze chcą dla nas jak najgorzej). Każde inne ustawienie niż $(1,1,1)$ nie jest najlepszą odpowiedzią, bo pozwala nam poprawić którąś z wypłat zmieniając strategię, czyli nie są równowagami Nasha.
-    \item Optima Pareto: Mamy nieskończoną liczbę optimów w sensie Pareto, ponieważ każdy profil strategii, który powoduje podłączenie wszystkich świnek do czujki oraz kable są minimalnej długości. Jeśli chcielibyśmy sobie polepszyć wypłatę, to jedynie możemy to zrobić skracając kabel, co z poprzednich rozważań z pewnością odłączyłoby którąś ze świnek i zmiejszyło jej wypłatę. Podobnie w konfiguracjach, w których nie wszystkie świnki są podłączone można polepszyć wypłatę świnek bez dostępu do czujki nie zmniejszając wypłaty tych podłączonych (podobnie jak w równowagach Nasha).
+    \item Optima Pareto: Mamy nieskończoną liczbę optimów w sensie Pareto, ponieważ każdy profil strategii, który powoduje podłączenie wszystkich świnek do czujki oraz kable są optymalnej długości (kable akurat starczają do czujki). Jeśli chcielibyśmy sobie polepszyć wypłatę, to jedynie możemy to zrobić skracając kabel, co z poprzednich rozważań z pewnością odłączyłoby którąś ze świnek i zmiejszyło jej wypłatę. Podobnie w konfiguracjach, w których nie wszystkie świnki są podłączone można polepszyć wypłatę świnek bez dostępu do czujki nie zmniejszając wypłaty tych podłączonych (podobnie jak w równowagach Nasha). Jeśli jest mniej świnke podłączonych to zawsze możemy kupić sobie kabel długości naszej odległości od czujki i się podłączyć poprawiając sobie i nie pogarszając innym.
 \end{itemize}
 
 \subsection*{d)}
@@ -51,6 +51,8 @@ Nie, ponieważ da się uzyskać większe wypłaty niż w profilu strategii (1,1,
 
 \subsection*{e)}
 
-Możnaby 
+Redukujemy do dwóch świnek, a następnie każemy świnkom wybrać wartość zmiennej boolowskiej, jeśli wskażą taką samą, to czujkę dostaje tylko świnka A, w p.p. tylko świnka B.
+
+Chyba, że chodziło o antykooperacyjną, wtedy można by było np zmniejszać zasięg czujki proporcjonalnie do liczby podłączonych świnek, wtedy wypłata spadałaby wraz z liczbą graczy obierających tę samą strategię.
 
 \end{document}
