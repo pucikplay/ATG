@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage[english]{babel}
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{polski}
+\usepackage{float}
+\usepackage{slashbox}
+
+\title{Algorytmiczna teoria gier {-} zadanie 41}
+\author{Gabriel Budziński}
+
+\begin{document}
+\maketitle
+
+\subsubsection*{(a)}
+
+Weźmy dwa zbiory zwarte $X$ i $Y$ oraz ciągi w tych zbiorach, odpowiednio $(x_n)$ i $(y_n)$. Wiemy, że $(x_n, y_n)$ jest zbieżny do $(x, y)$ wtedy i tylko wtedy, gdy $x_n \rightarrow x$ i $y_n \rightarrow y$. Zatem jeśli $(x_n)$ mapodciąg zbieżny $(x_{n_k})$ i $(y_{n_k})$ ma podciąg zbieżny $(y_{n_{k_l}})$, to $(x_{n_{k_l}}, y_{n_{k_l}})$ jest zbieżnym podciągiem ciągu $(x_n, y_n)$. Rozszeżenie tego wniosku na produkt zkończonej liczby zbiorów zwartych jest jasne.
+
+\subsubsection*{(b)}
+
+Weźmy zbiory wypukłe $A$ i $B$ oraz dowolne $x_A, y_A \in A$ oraz $x_B, y_B \in B$. Oznaczmy $\{\lambda x + (1 - \lambda)y : \lambda \in [0,1]\}$ jako $[x,y]$. Wiemy, że $[x_A, y_A] \subset A$ oraz $[x_B, y_B] \subset B$, w takim razie $([x_A, y_A], [x_B, y_B]) \subset A \times B$. Z tego mamy $A \times B$ - wypukły. Rozszeżenie tego wniosku na produkt zkończonej liczby zbiorów zwartych jest jasne.
+
+\subsubsection*{(c)}
+
+W przestrzeni dyskretnej każdy zbiór jest otwarty i domknięty, więc każdy przeciwobraz zbioru $B \subset I$, zbiór $A = f^{-1}[B] = {x \in S: f(x) = B}$ jest zbiorem otwartym.
+
+\subsubsection*{(d)}
+
+Natarczywy adorator:
+
+\begin{table}[H]
+    \begin{tabular}{c||c|c|c}
+        \backslashbox{$s_k$}{$s_a$} & S & G & \\\hline\hline
+        S & -1 & 1 & p\\\hline
+        G & 1 & -1 & 1-p\\\hline
+        & q & 1-q &
+    \end{tabular}
+\end{table}
+
+Gra ta nie ma czystych równowa Nasha (bo się kręcimy w kółko próbując je znaleźć, nie wiem jak dodać strzałki w tablicy).
+
+Policzmy dla $s_k$:
+
+$(-1)q + 1(1-q) = 1q + (-1)(1-q)$
+
+$1-2q = 2q-1$
+
+$q=\frac{1}{2}$
+
+Analogicznie dla $s_a$.
+
+Dostajemy MNE $((\frac{1}{2}, \frac{1}{2}),(\frac{1}{2}, \frac{1}{2}))$.
+
+\subsubsection*{(e)}
+
+Spełniają one warunek wklęsłości przez równość (są jednocześnie wklęsłe i wypukłe).
+
+\subsubsection*{(f)}
+
+Z twierdzenia Nasha z wykładu (4.1) mamy, że $F(s)$ jest domknięty.
+
+\subsubsection*{(g)}
+
+Ponieważ używając metody z uprzedniego dowodu daje kręcenie się w kółko.
+
+\end{document}
